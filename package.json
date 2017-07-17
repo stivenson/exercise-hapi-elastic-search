@@ -1,0 +1,30 @@
+{
+  "name": "exercise-hapi-elastic-search",
+  "version": "1.0.0",
+  "description": "stivenson hapi example elasticsearch",
+  "main": "example1.js",
+  "dependencies": {
+    "elasticsearch-hapi-plugin": "^0.2.0",
+    "hapi": "^16.4.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/stivenson/exercise-hapi-elastic-search.git"
+  },
+  "keywords": [
+    "hapi",
+    "elastic",
+    "search",
+    "nodejs"
+  ],
+  "author": "Stivenson Rincon Mora",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stivenson/exercise-hapi-elastic-search/issues"
+  },
+  "homepage": "https://github.com/stivenson/exercise-hapi-elastic-search#readme"
+}
