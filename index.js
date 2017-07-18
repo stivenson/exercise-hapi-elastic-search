@@ -22,19 +22,17 @@ server.register({
 
     // Basic uses
 
-    //*  get reference to plugin */
+    //**  get reference to plugin */
     let client = server.plugins['elasticsearch-hapi-plugin'].es;
     
-
     console.log(client);
-
 
     /**
      * Ping 
      */
     client.ping({
       requestTimeout: 30000,
-    }, (error) => {
+    }, error => {
         if (error) {
             console.error('Elasticsearch with hapi is down! :(');
             console.log(error);
@@ -44,28 +42,22 @@ server.register({
     });
 
     /**
-     *
+     * Search
      */
-
     client.search({
       q: 'pants'
-    }).then(function (body) {
-      console.log(body.hits.hits);
-    }, function (error) {
-      console.trace(error.message);
-    });
+    }).then( body => console.log(body.hits.hits)
+    , error => console.trace(error.message)
+    );
 
    /**
     * In mac
     * 1. Install elasticsearch with brew
     * 2. Edit file in path: /usr/local/etc/elasticsearch/elasticsearch.yml (optional, for changes of ip and port , etc.)
     * 3. Restart mac and after run elasticsearch (not background alternative)
+    * Use nodejs v8, install dependences and run command: "node ."
     */
 
-    /*
-     * Use nodejs v8
-     * and run command: node .
-     */
 
     console.log('#### CTRL-C for exit ####');
 
